@@ -93,4 +93,22 @@ return {
       scope  = { enabled = true },
     },
   },
+
+    -- Markdown render
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft           = { "markdown" },
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      heading = { enabled = true },
+      code    = { enabled = true },
+      bullet  = { enabled = true },
+      table   = { enabled = true },
+    },
+  }
 }
+
+
