@@ -1,0 +1,28 @@
+# =============================================================================
+# lazygit config
+# =============================================================================
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#89b4fa"
+      - bold
+    inactiveBorderColor:
+      - "#585b70"
+    selectedLineBgColor:
+      - "#313244"
+    cherryPickedCommitBgColor:
+      - "#45475a"
+    cherryPickedCommitFgColor:
+      - "#89b4fa"
+  showIcons: true
+  nerdFontsVersion: "3"
+  mouseEvents: true
+git:
+  pagers:
+    - colorArg: always
+      pager: diff-so-fancy
+keybinding:
+  universal:
+    quit: q
+    return: "<esc>"

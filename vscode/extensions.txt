@@ -1,0 +1,11 @@
+christian-kohler.path-intellisense
+eamodio.gitlens
+editorconfig.editorconfig
+esbenp.prettier-vscode
+github.copilot-chat
+golang.go
+mhutchie.git-graph
+pkief.material-icon-theme
+pkief.material-product-icons
+streetsidesoftware.code-spell-checker
+usernamehw.errorlens

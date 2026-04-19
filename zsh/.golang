@@ -1,0 +1,12 @@
+# =============================================================================
+# .golang — Go + GVM config
+# =============================================================================
+
+# GVM
+export GVM_ROOT="$HOME/.gvm"
+[[ -s "$GVM_ROOT/scripts/gvm" ]] && source "$GVM_ROOT/scripts/gvm"
+
+# Go env
+export GOPATH="$HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:$PATH"

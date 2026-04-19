@@ -1,0 +1,15 @@
+# =============================================================================
+# bat config
+# =============================================================================
+
+# Theme
+--theme="Catppuccin Mocha"
+
+# Show line numbers
+--style="numbers,changes,header"
+
+# Tab width
+--tabs=2
+
+# Wrap
+--wrap=never

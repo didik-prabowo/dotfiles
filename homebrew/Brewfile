@@ -1,0 +1,48 @@
+# =============================================================================
+# Brewfile — jalankan: brew bundle
+# =============================================================================
+
+# --- Taps ---
+# tap "homebrew/bundle"
+# tap "homebrew/cask-fonts"
+
+# --- Core CLI Tools ---
+brew "git"
+brew "git-delta"          # better git diff
+brew "diff-so-fancy"      # git diff formatter
+brew "stow"               # dotfiles manager
+brew "tmux"               # terminal multiplexer
+brew "zsh"                # shell
+brew "fzf"                # fuzzy finder
+brew "ripgrep"            # fast grep (rg)
+brew "fd"                 # fast find
+brew "bat"                # cat with syntax highlighting
+brew "eza"                # modern ls
+brew "zoxide"             # smart cd (z)
+brew "htop"               # process monitor
+brew "wget"               # download
+brew "jq"                 # JSON processor
+brew "tree"               # directory tree
+brew "tldr"               # simplified man pages
+brew "nvim"               #
+brew "tree-sitter"
+brew "stylua"
+brew "prettierd"
+brew "black"
+
+
+# --- Git extras ---
+brew "gh"                 # GitHub CLI
+brew "lazygit"            # TUI git client
+
+# --- Apps (Cask) ---
+cask "visual-studio-code"
+cask "iterm2"
+cask "raycast"            # spotlight replacement
+cask "rectangle"          # window manager
+cask "alt-tab"            # better cmd+tab
+
+# --- Fonts ---
+cask "font-jetbrains-mono-nerd-font"
+cask "font-fira-code-nerd-font"
+
