@@ -110,6 +110,11 @@ Key bindings:
 | `Space+rn` | Rename               |
 | `Space+ca` | Code action          |
 | `jk`       | Exit insert mode     |
+| `Space+gg` | Open Lazygit         |
+| `Space+gb` | Toggle git blame     |
+| `Space+xx` | All diagnostics      |
+| `Space+xs` | Symbols              |
+| `Space+xq` | Quickfix list        |
 
 ## Tmux
 
