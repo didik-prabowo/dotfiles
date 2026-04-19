@@ -9,6 +9,7 @@ Personal macOS development environment managed with [GNU Stow](https://www.gnu.o
 | macOS           | Operating system     |
 | Zsh + Oh My Zsh | Shell                |
 | Tmux + TPM      | Terminal multiplexer |
+| Iterm           | Terminal             |
 | Neovim          | Text editor          |
 | VSCode          | IDE                  |
 | Homebrew        | Package manager      |
