@@ -29,6 +29,8 @@ brew "tree-sitter"
 brew "stylua"
 brew "prettierd"
 brew "black"
+brew "pyenv"              # python version manager
+brew "openjdk@21"
 
 
 # --- Git extras ---

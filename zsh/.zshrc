@@ -132,7 +132,7 @@ export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
