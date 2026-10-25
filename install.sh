@@ -31,7 +31,9 @@ bash "$DOTFILES/scripts/brew.sh"
 # 2. GNU Stow — Symlink Dotfiles
 # =============================================================================
 info "Creating symlinks with GNU Stow..."
-PACKAGES=(zsh git config nvim)
+# Real dir so stow links only ~/.ssh/config, not the whole folder (keys stay out of the repo)
+mkdir -p "$HOME/.ssh" && chmod 700 "$HOME/.ssh"
+PACKAGES=(zsh git config ssh)
 for pkg in "${PACKAGES[@]}"; do
   if [ -d "$DOTFILES/$pkg" ]; then
     stow --dir="$DOTFILES" --target="$HOME" --restow "$pkg"
