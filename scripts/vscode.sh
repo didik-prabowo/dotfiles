@@ -13,11 +13,11 @@ info()    { echo -e "${BOLD}→ $1${RESET}"; }
 success() { echo -e "${GREEN}✓ $1${RESET}"; }
 warn()    { echo -e "${YELLOW}⚠ $1${RESET}"; }
 
-info "Copying VSCode settings..."
+info "Linking VSCode settings..."
 VSCODE_DIR="$HOME/Library/Application Support/Code/User"
 mkdir -p "$VSCODE_DIR"
-cp "$DOTFILES/vscode/settings.json" "$VSCODE_DIR/settings.json"
-success "VSCode settings copied"
+ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_DIR/settings.json"
+success "VSCode settings linked"
 
 info "Installing VSCode extensions..."
 if command -v code &>/dev/null; then

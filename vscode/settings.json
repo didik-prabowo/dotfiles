@@ -32,13 +32,13 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit",
-    "source.fixAll": "explicit"
+    "source.fixAll": "explicit",
   },
 
   // =============================================================================
   // Theme & Icons
   // =============================================================================
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "material-product-icons",
   "workbench.tree.indent": 12,
@@ -65,7 +65,7 @@
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
-    "**/node_modules": true
+    "**/node_modules": true,
   },
 
   // =============================================================================
@@ -75,8 +75,8 @@
     "editor.defaultFormatter": "golang.go",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
+      "source.organizeImports": "explicit",
+    },
   },
   "go.formatTool": "goimports",
   "go.lintTool": "golangci-lint",
@@ -99,5 +99,40 @@
   "explorer.confirmDragAndDrop": false,
   "breadcrumbs.enabled": true,
   "problems.showCurrentInStatus": true,
-  "extensions.autoUpdate": false
+  "extensions.autoUpdate": "off",
+  "claudeCode.preferredLocation": "panel",
+  "jdk.telemetry.enabled": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:oswe-vscode-modelD",
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "kilo-code.new.agentManagerOpen",
+    "kilo-code.new.agentManager.showTerminal",
+    "kilo-code.new.agentManager.previousTerminal",
+    "kilo-code.new.agentManager.nextTerminal",
+    "kilo-code.new.agentManager.runScript",
+  ],
+  "kilo-code.new.agentWorkStyle": "skipped",
+  "gitlens.views.commitDetails.files.compact": true,
+  "gitlens.views.commitDetails.files.icon": "type",
+  "gitlens.views.commitDetails.files.layout": "tree",
+  "gitlens.views.commitDetails.files.threshold": 5,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*",
+  },
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.md": "vscode.markdown.preview.editor",
+  },
 }
