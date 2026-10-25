@@ -34,9 +34,10 @@ Personal macOS development environment managed with [GNU Stow](https://www.gnu.o
 ├── vscode/             # VSCode settings & extensions
 ├── macos/              # macOS system defaults
 ├── scripts/            # Setup scripts (not stowed)
+├── .gitignore          # Ignores *.local files, ssh keys, gh tokens
 ├── .stow-global-ignore
 ├── install.sh          # Main setup script
-├── Makefile            # Shortcut commands
+├── KEYBINDIGS.md       # Keybinding cheatsheet
 └── README.md
 ```
 
@@ -44,7 +45,7 @@ Personal macOS development environment managed with [GNU Stow](https://www.gnu.o
 
 ```bash
 # 1. Clone repo
-git clone git@github.com:username/dotfiles.git ~/.dotfiles
+git clone git@github.com:didik-prabowo/dotfiles.git ~/.dotfiles
 
 # 2. Run installer
 cd ~/.dotfiles
@@ -59,9 +60,26 @@ The installer will:
 4. Install GVM + Go 1.22.0
 5. Install Tmux plugins via TPM
 6. Apply macOS system defaults (optional)
-7. Setup Git identity
+7. Setup Git identity (written to `~/.gitconfig.local`)
 8. Copy VSCode settings + install extensions
 9. Install Neovim plugins via lazy.nvim
+
+## Local Overrides
+
+Personal or machine-specific config lives in `*.local` files. They are
+gitignored, so they never get pushed.
+
+| File                  | Loaded by       | Use for                              |
+| --------------------- | --------------- | ------------------------------------ |
+| `~/.zshrc.local`      | `.zshrc`        | Work paths, machine-specific env     |
+| `~/.gitconfig.local`  | `.gitconfig`    | `[user]` name & email                |
+| `~/.ssh/config.local` | `.ssh/config`   | Private hosts, IPs, work servers     |
+
+On a new machine, `install.sh` creates `~/.gitconfig.local` for you. Create the
+other two only if you need them.
+
+> `git config --global` still writes to the tracked `.gitconfig`. For anything
+> personal, use `git config --file ~/.gitconfig.local ...` instead.
 
 ## Zsh
 
@@ -84,7 +102,8 @@ nvim/
 └── lua/
     ├── core/
     │   ├── options.lua   # Vim settings
-    │   └── keymaps.lua   # Keybindings (Space as leader)
+    │   ├── keymaps.lua   # Keybindings (Space as leader)
+    │   └── autocmds.lua  # Autocommands
     └── plugins/
         ├── colorscheme.lua  # Catppuccin
         ├── ui.lua           # mini.statusline, Neo-tree, gitsigns
@@ -92,6 +111,8 @@ nvim/
         ├── telescope.lua    # Fuzzy finder
         ├── lsp.lua          # LSP + autocomplete
         ├── go.lua           # Go development
+        ├── git.lua          # Git integration
+        ├── trouble.lua      # Diagnostics list
         └── formatting.lua   # conform.nvim
 ```
 
