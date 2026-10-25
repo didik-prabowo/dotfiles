@@ -38,6 +38,7 @@ brew "lazygit"            # TUI git client
 # --- Apps (Cask) ---
 cask "visual-studio-code"
 cask "iterm2"
+cask "orbstack"
 cask "raycast"            # spotlight replacement
 cask "rectangle"          # window manager
 cask "alt-tab"            # better cmd+tab
