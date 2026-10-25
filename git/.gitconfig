@@ -1,7 +1,3 @@
-[user]
-  name  = Your Name
-  email = your@email.com
-
 [core]
   editor     = code --wait
   excludesfile = ~/.gitignore_global
@@ -42,3 +38,13 @@
   unstage = reset HEAD --
   whoami = config user.email
   aliases = config --get-regexp alias
+  rb = rebase --committer-date-is-author-date
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+# Identitas & config mesin-spesifik (tidak di-commit)
+[include]
+  path = ~/.gitconfig.local

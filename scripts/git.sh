@@ -3,7 +3,6 @@
 # git.sh — Git Identity Setup
 # =============================================================================
 
-DOTFILES="$HOME/.dotfiles"
 BOLD="\033[1m"
 GREEN="\033[0;32m"
 RESET="\033[0m"
@@ -17,7 +16,7 @@ read -rp "Your name: " git_name
 read -rp "Your email: " git_email
 
 if [ -n "$git_name" ] && [ -n "$git_email" ]; then
-  sed -i '' "s/Your Name/$git_name/" "$DOTFILES/git/.gitconfig"
-  sed -i '' "s/your@email.com/$git_email/" "$DOTFILES/git/.gitconfig"
+  git config --file "$HOME/.gitconfig.local" user.name  "$git_name"
+  git config --file "$HOME/.gitconfig.local" user.email "$git_email"
   success "Git identity set: $git_name <$git_email>"
 fi
