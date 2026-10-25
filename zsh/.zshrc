@@ -122,3 +122,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export PATH="/Applications/OrbStack.app/Contents/MacOS/xbin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+
+# Google Cloud SDK
+[ -f "$HOME/google-cloud-sdk/path.zsh.inc" ] && . "$HOME/google-cloud-sdk/path.zsh.inc"
+[ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ] && . "$HOME/google-cloud-sdk/completion.zsh.inc"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# Mesin-spesifik / kerjaan, tidak di-commit
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
