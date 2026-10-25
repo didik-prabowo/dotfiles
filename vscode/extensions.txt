@@ -6,7 +6,6 @@ christian-kohler.path-intellisense
 eamodio.gitlens
 editorconfig.editorconfig
 esbenp.prettier-vscode
-georgewfraser.vscode-javac
 golang.go
 graphql.vscode-graphql
 graphql.vscode-graphql-syntax
@@ -15,7 +14,6 @@ mhutchie.git-graph
 ms-vscode-remote.remote-containers
 ms-vscode.makefile-tools
 ms-vscode.vscode-chat-customizations-evaluations
-oracle.oracle-java
 pkief.material-icon-theme
 pkief.material-product-icons
 qwtel.sqlite-viewer
