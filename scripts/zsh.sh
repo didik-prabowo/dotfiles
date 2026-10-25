@@ -13,7 +13,7 @@ success() { echo -e "${GREEN}✓ $1${RESET}"; }
 info "Checking Oh My Zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   info "Installing Oh My Zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
   success "Oh My Zsh installed"
 else
   success "Oh My Zsh already installed"
