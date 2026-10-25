@@ -37,7 +37,7 @@ Personal macOS development environment managed with [GNU Stow](https://www.gnu.o
 ├── .gitignore          # Ignores *.local files, ssh keys, gh tokens
 ├── .stow-global-ignore
 ├── install.sh          # Main setup script
-├── KEYBINDIGS.md       # Keybinding cheatsheet
+├── KEYBINDINGS.md      # Keybinding cheatsheet
 └── README.md
 ```
 
